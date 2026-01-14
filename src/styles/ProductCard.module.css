@@ -1,3 +1,20 @@
-/* TODO: Style the product card container */
+/* src/styles/ProductCard.module.css */
+.card {
+  border-radius: 18px !important; /* Apple-style rounded corners */
+  border: none !important;
+  box-shadow: var(--apple-shadow) !important;
+  background: var(--apple-card) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
 
-/* TODO: Add special styling for out-of-stock products */
+.card:hover {
+  transform: translateY(-4px); /* Subtle lift effect */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* The class required by your tests */
+.outOfStock {
+  opacity: 0.6;
+  filter: grayscale(100%);
+}
