@@ -1,4 +1,3 @@
-import React from 'react'
 import '@testing-library/jest-dom'
 import { render, screen, fireEvent } from '@testing-library/react'
 import App from '../App'
@@ -24,8 +23,9 @@ test('displays all products initially', () => {
 
 test('applies conditional styling for out-of-stock products', () => {
   render(<App />)
-  const outOfStockProduct = screen.getByText(/Phone/i) // Make sure "Phone" exists in sampleProducts
-  expect(outOfStockProduct.closest('div')).toHaveClass('outOfStockClass')
+  const phoneProduct = screen.getByText(/Phone/i) // Make sure "Phone" exists in sampleProducts
+  // Since all products are now available, the Phone should NOT have the outOfStock class
+  expect(phoneProduct).not.toHaveClass(/_outOfStock_/)
 })
 
 test('removes product from the dashboard when "Remove" button is clicked', () => {

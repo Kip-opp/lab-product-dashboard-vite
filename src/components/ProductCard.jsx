@@ -46,6 +46,7 @@ function ProductCard({ product, onDelete }) {
               color="error" 
               size="small" 
               onClick={() => onDelete(id)}
+              className={styles.removeButton}
             >
               Remove
             </Button>

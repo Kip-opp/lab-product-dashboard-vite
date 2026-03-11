@@ -1,8 +1,9 @@
  // src/App.jsx
-import React, { useState } from 'react';
+import { useState } from 'react';
 import ProductList from './components/ProductList';
 import { Container, Typography, Box, FormControlLabel, Switch, CssBaseline } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import productsData from '../db.json';
 
 // Modern bluish-purple theme
 const theme = createTheme({
@@ -99,11 +100,7 @@ const theme = createTheme({
 const App = () => {
   // TODO: Define initial product data
   // NOTE: Data MUST match the test file expectations (Laptop, Phone, exact prices as strings)
-  const [products, setProducts] = useState([
-    { id: 1, name: 'Laptop', price: '$999', inStock: true },
-    { id: 2, name: 'Phone', price: '$699', inStock: false },
-    { id: 3, name: 'Tablet', price: '$499', inStock: true },
-  ]);
+  const [products, setProducts] = useState(productsData.products);
 
   // TODO: Implement state to manage filtering
   const [showInStockOnly, setShowInStockOnly] = useState(false);

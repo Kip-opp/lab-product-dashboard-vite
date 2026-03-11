@@ -43,3 +43,29 @@
     transform: translateY(0) scale(1);
   }
 }
+
+/* Enhanced remove button styling for better visibility */
+.removeButton {
+  background-color: #ef4444 !important;
+  color: white !important;
+  border: none !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  box-shadow: 0 4px 6px rgba(239, 68, 68, 0.3) !important;
+  transition: all 0.2s ease !important;
+  border-radius: 8px !important;
+  padding: 8px 16px !important;
+  font-size: 12px !important;
+}
+
+.removeButton:hover {
+  background-color: #dc2626 !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 6px 12px rgba(239, 68, 68, 0.4) !important;
+}
+
+.removeButton:active {
+  transform: translateY(0) !important;
+  box-shadow: 0 2px 4px rgba(239, 68, 68, 0.3) !important;
+}
