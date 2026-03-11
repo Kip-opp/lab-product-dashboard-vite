@@ -2,12 +2,13 @@
 
 ## Overview
 
-A modern, responsive e-commerce product dashboard built with React, Material-UI, and CSS Modules. This application provides a sleek interface for managing and displaying product inventory with advanced filtering capabilities and a beautiful bluish-purple gradient theme.
+A modern, responsive e-commerce product dashboard built with React, Material-UI, and CSS Modules. This application provides a sleek interface for managing and displaying product inventory with enhanced remove button visibility, advanced filtering capabilities, and a beautiful bluish-purple gradient theme.
 
 ## Features
 
 ### 🎨 **Modern Design System**
 - **Bluish-Purple Gradient Theme**: Elegant color scheme with glassmorphism effects
+- **Enhanced Remove Buttons**: Bright red styling with high contrast for better visibility
 - **Responsive Layout**: Optimized for desktop, tablet, and mobile devices
 - **Smooth Animations**: Floating card effects and hover interactions
 - **Accessibility**: Built with Material-UI for enhanced accessibility
@@ -17,11 +18,18 @@ A modern, responsive e-commerce product dashboard built with React, Material-UI,
 - **Availability Filtering**: Toggle switch to show only in-stock items
 - **Stock Management**: Visual indicators for product availability
 - **Product Actions**: Buy and Remove functionality for each product
+- **Data-Driven**: Products loaded from JSON configuration file
+
+### 🛠️ **Product Catalog**
+- **10 Diverse Products**: Laptop, Phone, Tablet, Wireless Earbuds, Smartwatch, Camera, Monitor, Keyboard, Mouse, Speaker
+- **All Products Available**: All items marked as in-stock for immediate display
+- **Rich Product Data**: Name, price, and availability status for each item
 
 ### 🔧 **Technical Highlights**
 - **React 18**: Modern React with hooks and functional components
 - **Material-UI v5**: Professional component library with custom theming
-- **CSS Modules**: Scoped styling with modern design patterns
+- **CSS Modules**: Scoped styling with enhanced button visibility
+- **JSON Data Integration**: Products loaded from `db.json` configuration
 - **Jest & React Testing Library**: Comprehensive test coverage
 
 ## Installation
@@ -34,7 +42,7 @@ A modern, responsive e-commerce product dashboard built with React, Material-UI,
 
 1. **Clone the Repository**
    ```bash
-   git clone <repository-url>
+   git clone http://git@github.com:Kip-opp/lab-product-dashboard-vite.git
    cd lab-product-dashboard-vite
    ```
 
@@ -49,7 +57,24 @@ A modern, responsive e-commerce product dashboard built with React, Material-UI,
    ```
 
 4. **Open in Browser**
-   Navigate to `http://localhost:5173` to view the application.
+   Navigate to `http://localhost:5174` to view the application.
+
+## Enhanced Features
+
+### 🔴 **Improved Remove Button Visibility**
+The remove buttons have been enhanced with:
+- Bright red background (#ef4444) for high contrast
+- White text for clear readability
+- Bold font weight and uppercase styling
+- Hover effects with shadow and transform animations
+- Proper padding and border radius for better appearance
+
+### 📦 **Product Catalog**
+The dashboard now includes 10 diverse products loaded from `db.json`:
+- **Electronics**: Laptop, Phone, Tablet, Camera, Monitor
+- **Audio**: Wireless Earbuds, Speaker
+- **Accessories**: Smartwatch, Keyboard, Mouse
+- **Availability**: All products are marked as in-stock for immediate display
 
 ## Usage
 
@@ -147,9 +172,9 @@ The application includes comprehensive tests covering:
 ## Contributing
 
 1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
+2. Create a feature branch (`git checkout -b feature/branch)
+3. Commit your changes (`git commit -m 'Add feature/branch'`)
+4. Push to the branch (`git push origin feature/branch`)
 5. Open a Pull Request
 
 ## License
