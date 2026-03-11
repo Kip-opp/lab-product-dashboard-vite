@@ -1,5 +1,4 @@
 // src/components/ProductCard.jsx
-import React from "react";
 import { Card, CardContent, Typography, Button, Chip, Box } from "@mui/material";
 import styles from "../styles/ProductCard.module.css";
 
@@ -8,16 +7,20 @@ function ProductCard({ product, onDelete }) {
 
   return (
     <Card 
-      className={`${styles.card} ${!inStock ? 'outOfStockClass' : ''}`}
+      className={`${styles.card} ${!inStock ? styles.outOfStock : ''} ${styles.cardGlass}`}
       variant="outlined"
-      style={{ opacity: inStock ? 1 : 0.6, background: inStock ? 'white' : '#f0f0f0' }}
+      style={{ 
+        opacity: inStock ? 1 : 0.6, 
+        background: inStock ? 'rgba(255, 255, 255, 0.9)' : 'rgba(240, 240, 240, 0.8)',
+        border: inStock ? '1px solid rgba(102, 126, 234, 0.2)' : '1px solid rgba(100, 100, 100, 0.3)'
+      }}
     >
       {/* FIX: "Phone" is inside this div, ensuring closest('div') finds 'outOfStockClass' */}
-      <div className={!inStock ? 'outOfStockClass' : ''}>
+      <div className={!inStock ? styles.outOfStock : ''}>
         <CardContent>
           <Typography variant="h5" 
           component="div"
-           className={!inStock ? "outOfStockClass" : ""}
+           className={!inStock ? styles.outOfStock : ""}
            >
             {name}
           </Typography>

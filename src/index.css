@@ -1,30 +1,56 @@
 /* src/index.css */
 :root {
-  --apple-bg: #F5F5F7;
-  --apple-card: #FFFFFF;
-  --apple-text: #1D1D1F;
-  --apple-subtext: #86868B;
-  --apple-blue: #0071E3;
-  --apple-red: #FF3B30;
-  --apple-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  --bluish-purple-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --modern-card: #ffffff;
+  --modern-text: #1a1a1a;
+  --modern-subtext: #666666;
+  --modern-accent: #667eea;
+  --modern-shadow: 0 8px 32px rgba(102, 126, 234, 0.3);
+  --card-hover: 0 16px 40px rgba(102, 126, 234, 0.4);
 }
 
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
-  background-color: var(--apple-bg);
-  color: var(--apple-text);
+  background: var(--bluish-purple-bg);
+  color: var(--modern-text);
+  min-height: 100vh;
 }
 
-/* Custom Scrollbar for a cleaner look */
+/* Enhanced Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: transparent;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
 }
 ::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.3);
   border-radius: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Modern glassmorphism effect for cards */
+.card-glass {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Floating animation for cards */
+@keyframes floatIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.card-enter {
+  animation: floatIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
